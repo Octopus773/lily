@@ -1,8 +1,8 @@
 ##
 ## EPITECH PROJECT, 2019
-## libmy
+## library lily
 ## File description:
-## makefile libmy
+## Makefile liblily
 ##
 
 NAME 		= 	liblily.a
