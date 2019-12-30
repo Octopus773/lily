@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** task1 day13
+** library lily
 ** File description:
-** none
+** lily_rem_node
 */
 
 #include "lily.h"

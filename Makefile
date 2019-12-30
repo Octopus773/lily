@@ -5,42 +5,41 @@
 ## makefile libmy
 ##
 
-NAME = liblily.a
+NAME 		= 	liblily.a
 
-SRC 	= 	sources/lily_add_node.c \
-			sources/lily_create_node.c \
-			sources/lily_destroy_list.c \
-			sources/lily_destroy_node.c \
-			sources/lily_get_node_from_index.c \
-			sources/lily_get_index_from_node.c \
-			sources/lily_get_list_length.c \
-			sources/lily_rem_node.c \
-			sources/lily_create_list_from_array.c \
-			sources/lily_mov_node.c \
-			sources/lily_inv_list.c \
+SRC		 	= 	sources/lily_add_node.c \
+				sources/lily_create_node.c \
+				sources/lily_destroy_list.c \
+				sources/lily_destroy_node.c \
+				sources/lily_get_node_from_index.c \
+				sources/lily_get_index_from_node.c \
+				sources/lily_get_list_length.c \
+				sources/lily_rem_node.c \
+				sources/lily_create_list_from_array.c \
+				sources/lily_mov_node.c \
+				sources/lily_inv_list.c \
 
-OBJ = $(SRC:%.c=%.o)
+OBJ 		=   $(SRC:%.c=%.o)
 
-TESTS = tests/test_my_printf.c \
+TESTS 		= 	tests/test_my_printf.c \
 
-SRC_TEST =	sources/my_putnbr_base_long.c \
+SRC_TEST 	=	sources/my_putnbr_base_long.c \
 
 
-INCLUDE = -I ./includes
+INCLUDE 	= 	-I ./includes
 
-COVERAGE = --coverage -lcriterion
+COVERAGE 	= 	--coverage -lcriterion
 
-CFLAGS = -W -Wall -Wextra -Wshadow $(INCLUDE)
+CFLAGS 		= 	-W -Wall -Wextra -Wshadow $(INCLUDE)
 
-CC = gcc
+CC 			= 	gcc
 
-NAME_TEST = unit_tests
+NAME_TEST 	= 	unit_tests
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(AR) rc $(NAME) $(OBJ)
-	cp includes/lily.h ../../includes
 
 clean :
 	$(RM) $(OBJ)
