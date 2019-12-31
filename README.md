@@ -1,2 +1,2 @@
 # lily
-lily is a simple library to manage linked lists
+lily is a simple library to manage linked lists in C
