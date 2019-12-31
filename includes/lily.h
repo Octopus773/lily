@@ -40,6 +40,14 @@ lily_list *lily_create_node(void *data);
 void lily_destroy_node(lily_list *node);
 
 ////////////////////////////////////////////////////////////
+/// \brief Destroy a node given as parameter, does free the data
+///
+/// \param pointer to a node
+///
+////////////////////////////////////////////////////////////
+void lily_destroy_node_and_data(lily_list *node);
+
+////////////////////////////////////////////////////////////
 /// \brief Destroy a list with a pointer to an list's node,
 /// does not free the data of the nodes
 ///
@@ -49,6 +57,17 @@ void lily_destroy_node(lily_list *node);
 ///
 ////////////////////////////////////////////////////////////
 int lily_destroy_list(lily_list *list);
+
+////////////////////////////////////////////////////////////
+/// \brief Destroy a list with a pointer to an list's node,
+/// does free the data of the nodes
+///
+/// \param pointer to node
+///
+/// \return -1 if a problem occured, 0 otherwise
+///
+////////////////////////////////////////////////////////////
+int lily_destroy_list_and_data(lily_list *list);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the node corresponding to the list's index
