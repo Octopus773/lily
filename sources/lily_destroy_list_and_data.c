@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** library lily
 ** File description:
-** lily_destroy_list
+** lily_destroy_list_and_data
 */
 
 #include "lily.h"

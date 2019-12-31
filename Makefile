@@ -23,10 +23,8 @@ SRC		 	= 	sources/lily_add_node.c \
 
 OBJ 		=   $(SRC:%.c=%.o)
 
-TESTS 		= 	tests/test_my_printf.c \
-
-SRC_TEST 	=	sources/my_putnbr_base_long.c \
-
+TESTS 		= 	tests/tests_create_node.c \
+				tests/tests_add_node.c \
 
 INCLUDE 	= 	-I ./includes
 
@@ -55,5 +53,5 @@ re : fclean all
 
 tests_run :
 	$(RM) *.gc*
-	$(CC) -o $(NAME_TEST) $(SRC_TEST) $(TESTS) $(INCLUDE) $(COVERAGE) $(CFLAGS)
+	$(CC) -o $(NAME_TEST) $(SRC) $(TESTS) $(COVERAGE) $(CFLAGS)
 	./unit_tests
