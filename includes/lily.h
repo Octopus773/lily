@@ -46,7 +46,7 @@ void lily_destroy_node(lily_list *node);
 /// \param pointer to a node
 ///
 ////////////////////////////////////////////////////////////
-void lily_destroy_node_and_data(lily_list *node);
+void lily_destroy_node_and_data(lily_list *node, void (*destroy)(void *));
 
 ////////////////////////////////////////////////////////////
 /// \brief Destroy a list with a pointer to an list's node,
@@ -68,7 +68,7 @@ int lily_destroy_list(lily_list *list);
 /// \return -1 if a problem occured, 0 otherwise
 ///
 ////////////////////////////////////////////////////////////
-int lily_destroy_list_and_data(lily_list *list);
+int lily_destroy_list_and_data(lily_list *node, void (*destroy)(void *));
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the node corresponding to the list's index
