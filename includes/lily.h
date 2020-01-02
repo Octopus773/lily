@@ -9,6 +9,7 @@
 #define _LILY_H_
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 ////////////////////////////////////////////////////////////
 /// \brief void *data | lily_list *prev | lily_list *next
@@ -153,5 +154,27 @@ int lily_mov_node(lily_list **first, lily_list *node, int new_index);
 ///
 ////////////////////////////////////////////////////////////
 int lily_inv_list(lily_list **first);
+
+////////////////////////////////////////////////////////////
+/// \brief Sort a list the smallest data will be first
+///
+/// \param pointer to the start node of the list, pointer to a
+/// function which can compare the data of two nodes and return an int
+///
+/// \return -1 if a problem occured, 0 otherwise
+///
+////////////////////////////////////////////////////////////
+int lily_sort_list_az(lily_list **first, int (cmp)(void *, void *));
+
+////////////////////////////////////////////////////////////
+/// \brief Sort a list the biggest data will be first
+///
+/// \param pointer to the start node of the list, pointer to a
+/// function which can compare the data of two nodes and return an int
+///
+/// \return -1 if a problem occured, 0 otherwise
+///
+////////////////////////////////////////////////////////////
+int lily_sort_list_za(lily_list **first, int (cmp)(void *, void *));
 
 #endif

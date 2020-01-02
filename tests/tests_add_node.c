@@ -7,7 +7,7 @@
 
 #include <criterion/criterion.h>
 #include <criterion/redirect.h>
-#include "../includes/lily.h"
+#include "lily.h"
 
 Test(tests_lily_add_node, create_a_list_from_NULL, .init = cr_redirect_stdout)
 {

@@ -20,6 +20,7 @@ SRC		 	= 	sources/lily_add_node.c \
 				sources/lily_inv_list.c \
 				sources/lily_destroy_node_and_data.c \
 				sources/lily_destroy_list_and_data.c \
+				sources/lily_sort_list.c \
 
 OBJ 		=   $(SRC:%.c=%.o)
 
