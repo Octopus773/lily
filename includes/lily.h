@@ -46,7 +46,7 @@ void lily_destroy_node(lily_list *node);
 /// \param pointer to a node
 ///
 ////////////////////////////////////////////////////////////
-void lily_destroy_node_and_data(lily_list *node, void (*destroy)(void *));
+void lily_destroy_node_and_data(lily_list *node, void destroy(void *));
 
 ////////////////////////////////////////////////////////////
 /// \brief Destroy a list with a pointer to an list's node,
@@ -68,7 +68,7 @@ int lily_destroy_list(lily_list *list);
 /// \return -1 if a problem occured, 0 otherwise
 ///
 ////////////////////////////////////////////////////////////
-int lily_destroy_list_and_data(lily_list *node, void (*destroy)(void *));
+int lily_destroy_list_and_data(lily_list *list, void destroy(void *));
 
 ////////////////////////////////////////////////////////////
 /// \brief Get the node corresponding to the list's index
@@ -164,7 +164,7 @@ int lily_inv_list(lily_list **first);
 /// \return -1 if a problem occured, 0 otherwise
 ///
 ////////////////////////////////////////////////////////////
-int lily_sort_list_az(lily_list **first, int (cmp)(void *, void *));
+int lily_sort_list_az(lily_list **first, int cmp(void *, void *));
 
 ////////////////////////////////////////////////////////////
 /// \brief Sort a list the biggest data will be first
@@ -175,6 +175,6 @@ int lily_sort_list_az(lily_list **first, int (cmp)(void *, void *));
 /// \return -1 if a problem occured, 0 otherwise
 ///
 ////////////////////////////////////////////////////////////
-int lily_sort_list_za(lily_list **first, int (cmp)(void *, void *));
+int lily_sort_list_za(lily_list **first, int cmp(void *, void *));
 
 #endif

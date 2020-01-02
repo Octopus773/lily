@@ -7,11 +7,11 @@
 
 #include "lily.h"
 
-void lily_destroy_node_and_data(lily_list *node, void (*destroy)(void *))
+void lily_destroy_node_and_data(lily_list *node, void destroy(void *))
 {
-    if (!node)
+    if (!node || !destroy)
         return;
     if (node->data)
-        destroy(node->data);
+        (*destroy)(node->data);
     free(node);
 }
