@@ -5,7 +5,7 @@
 ** lily_sort_list
 */
 
-#include "../includes/lily.h"
+#include "lily.h"
 
 static int lily_is_sort_list(lily_list *st, int (*cmp)(void *, void *), bool az)
 {
