@@ -177,4 +177,15 @@ int lily_sort_list_az(lily_list **first, int cmp(void *, void *));
 ////////////////////////////////////////////////////////////
 int lily_sort_list_za(lily_list **first, int cmp(void *, void *));
 
-#endif
+////////////////////////////////////////////////////////////
+/// \brief Create an array from a list, the data of the type of
+/// data's node must be the same
+///
+/// \param pointer to the start node of the list
+///
+/// \return NULL if a problem occured, a pointer to the array otherwise
+///
+////////////////////////////////////////////////////////////
+void **lily_create_array_from_list(lily_list *first);
+
+#endif //_LILY_H_
