@@ -197,6 +197,6 @@ void **lily_create_array_from_list(lily_list *first);
 /// \return -1 if a problem occured, a 0 otherwise
 ///
 ////////////////////////////////////////////////////////////
-int lily_add_list_to_list(lily_list **first_dest, lily_list *first_src, int ind);
+int lily_add_list(lily_list **first_dest, lily_list *first_src, int index);
 
 #endif //_LILY_H_
