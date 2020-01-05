@@ -188,4 +188,15 @@ int lily_sort_list_za(lily_list **first, int cmp(void *, void *));
 ////////////////////////////////////////////////////////////
 void **lily_create_array_from_list(lily_list *first);
 
+////////////////////////////////////////////////////////////
+/// \brief Add a list to an other list at the index
+///
+/// \param pointer to the start node of the list_dest and and list_src and
+/// an index
+///
+/// \return -1 if a problem occured, a 0 otherwise
+///
+////////////////////////////////////////////////////////////
+int lily_add_list_to_list(lily_list **first_dest, lily_list *first_src, int ind);
+
 #endif //_LILY_H_
