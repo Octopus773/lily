@@ -7,13 +7,16 @@
 
 #include "lily.h"
 
-int lily_destroy_list(lily_list *list)
+int lily_destroy_list(lily_list **list_arg)
 {
-    lily_list *start_node = list;
+    lily_list *start_node;
+    lily_list *list;
     lily_list *node_tmp;
 
-    if (!list || !list->next || !list->prev)
+    if (!list_arg || !*list_arg || !(*list_arg)->next)
         return (-1);
+    start_node = *list_arg;
+    list = *list_arg;
     list = list->next;
     while (list != start_node) {
         if (!list->next)
@@ -23,5 +26,6 @@ int lily_destroy_list(lily_list *list)
         free(node_tmp);
     }
     free(start_node);
+    *list_arg = NULL;
     return (0);
 }

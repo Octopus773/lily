@@ -17,7 +17,7 @@ lily_list *lily_create_list_from_array(void **array)
     for (int i = 0; array[i]; i++) {
         node = lily_create_node(array[i]);
         if (!node) {
-            lily_destroy_list(first);
+            lily_destroy_list(&first);
             return (NULL);
         }
         lily_add_node(&first, node, -1);
