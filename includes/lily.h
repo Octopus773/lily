@@ -199,4 +199,21 @@ void **lily_create_array_from_list(lily_list *first);
 ////////////////////////////////////////////////////////////
 int lily_add_list(lily_list **first_dest, lily_list *first_src, int index);
 
+
+
+#define FOREACH(type, item, iterator, list) if (list) { \
+lily_list *iterator = list; do { type *item = iterator->data;
+#define ENDFOREACH(iterator, head) iterator = iterator->next; \
+} while (iterator != head); }
+#define ENDFOREACH_NONEXT(iterator, head) } while (iterator != head); }
+
+#define CONTINUE(iterator) iterator = iterator->next; continue
+
+
+#define ENUMERATE(type, item, index, iterator, list, count) if (list) { \
+size_t count = lily_get_list_length(list); lily_list *iterator = list; \
+for (size_t index = 0; index < count; index++) { type *item = iterator->data;
+#define ENDENUMERATE(iterator) iterator = iterator->next; } }
+#define ENDENUMERATE_NONEXT(iterator) } }
+
 #endif //_LILY_H_
