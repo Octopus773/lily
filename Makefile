@@ -23,6 +23,7 @@ SRC		 	= 	sources/lily_add_node.c \
 				sources/lily_sort_list.c \
 				sources/lily_create_array_from_list.c \
 				sources/lily_add_list.c \
+				sources/lily_get_node_from_data.c
 
 OBJ 		=   $(SRC:%.c=%.o)
 

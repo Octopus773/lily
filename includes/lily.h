@@ -199,6 +199,17 @@ void **lily_create_array_from_list(lily_list *first);
 ////////////////////////////////////////////////////////////
 int lily_add_list(lily_list **first_dest, lily_list *first_src, int index);
 
+////////////////////////////////////////////////////////////
+/// \brief Get the node with the corresponding data
+///
+/// \param first The list to look in
+///
+/// \param data The data to look for
+///
+/// \return NULL if no node is found, a pointer to the node otherwise
+///
+////////////////////////////////////////////////////////////
+lily_list *lily_get_node_from_data(lily_list *first, void *data);
 
 
 #define FOREACH(type, item, iterator, list) if (list) { \
