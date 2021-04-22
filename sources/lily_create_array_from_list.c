@@ -6,6 +6,7 @@
 */
 
 #include "lily.h"
+#include <malloc.h>
 
 void **lily_create_array_from_list(lily_list *first)
 {

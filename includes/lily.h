@@ -8,8 +8,8 @@
 #ifndef _LILY_H_
 #define _LILY_H_
 
-#include <stdlib.h>
 #include <stdbool.h>
+#include <stddef.h>
 
 ////////////////////////////////////////////////////////////
 /// \brief void *data | lily_list *prev | lily_list *next

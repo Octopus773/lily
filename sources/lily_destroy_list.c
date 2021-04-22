@@ -6,6 +6,7 @@
 */
 
 #include "lily.h"
+#include <malloc.h>
 
 int lily_destroy_list(lily_list **list_arg)
 {

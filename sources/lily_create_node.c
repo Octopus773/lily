@@ -6,6 +6,7 @@
 */
 
 #include "lily.h"
+#include <malloc.h>
 
 lily_list *lily_create_node(void *data)
 {
